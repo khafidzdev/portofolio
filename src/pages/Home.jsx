@@ -8,9 +8,8 @@ function Home() {
         <>
             <Navbar />
             <Header />
-            <About />
-
             <Portfolio />
+            <About />
             <Footer />
         </>
     )

@@ -1,11 +1,10 @@
 nav {
-  background-color: transparent;
+  background-color: #222831;
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
   text-transform: uppercase;
-  height: 100px;
 }
 nav > .wrapper {
   display: flex;
@@ -87,25 +86,4 @@ nav > .wrapper > button > svg {
   .menu > ul > li > a:hover {
     background-color: #222831;
   }
-}
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  background: transparent;
-  -webkit-border-radius: 0;
-}
-
-::-webkit-scrollbar:hover {
-  width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #868686;
-  -webkit-border-radius: 0;
-}
-
-::-webkit-scrollbar-thumb:hover,
-::-webkit-scrollbar-thumb:active {
-  background: #000000;
-  cursor: pointer;
 }

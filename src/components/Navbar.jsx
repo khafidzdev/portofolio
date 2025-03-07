@@ -1,58 +1,42 @@
 import { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import '../styles/Navbar.css';
-import Dock from '../components/Dock/Dock';
-import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
+import '../styles/Navbar.css'
+import { FaBars } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
+import { HashLink } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
+
 
 function Navbar() {
-    const navigate = useNavigate(); 
-    const location = useLocation(); // Untuk mengecek halaman saat ini
-    const [statusTampil, setStatusTampil] = useState('');
+    const [statusTampil, setStatusTampil] = useState('')
 
-    function handleNavigation(path, isHashLink = false) {
-        setStatusTampil(''); // Tutup menu setelah navigasi
-
-        if (isHashLink) {
-            if (location.pathname !== '/') {
-                // Jika di halaman lain, navigasi ke home dulu, lalu scroll setelah home dimuat
-                navigate('/');
-                setTimeout(() => {
-                    scrollToSection(path);
-                }, 100); // Tunggu sebentar agar halaman utama dimuat dulu
-            } else {
-                scrollToSection(path);
-            }
+    function tampilMenu() {
+        if (statusTampil == '') {
+            setStatusTampil('tampil')
         } else {
-            navigate(path);
+            setStatusTampil('')
         }
     }
-
-    function scrollToSection(id) {
-        const targetElement = document.getElementById(id.replace('#', ''));
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
-    const items = [
-        { icon: <VscHome size={18} />, label: 'Home', onClick: () => handleNavigation('/') },
-        { icon: <VscArchive size={18} />, label: 'Portfolio', onClick: () => handleNavigation('#portfolio', true) },
-        { icon: <VscAccount size={18} />, label: 'About', onClick: () => handleNavigation('#about', true) },
-        { icon: <VscSettingsGear size={18} />, label: 'Experience', onClick: () => handleNavigation('/experience') },
-    ];
-
     return (
         <nav>
             <div className="wrapper">
-                <Dock 
-                    items={items}
-                    panelHeight={68}
-                    baseItemSize={50}
-                    magnification={70}
-                />
+                <div className="logo">
+                    <Link to="/">RumahRafif</Link>
+                </div>
+                <button onClick={tampilMenu}>
+                    {
+                        statusTampil == '' ? (<FaBars />) : (<IoMdClose />)
+                    }
+                </button>
+                <div className={`menu ${statusTampil}`} onClick={tampilMenu}>
+                    <ul>
+                        <li><HashLink to="/#portfolio">Portfolio</HashLink></li>
+                        <li><HashLink to="/#about">About</HashLink></li>
+                        <li><Link to="/experience">Experience</Link></li>
+                    </ul>
+                </div>
             </div>
         </nav>
-    );
+    )
 }
 
-export default Navbar;
+export default Navbar
