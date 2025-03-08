@@ -1,7 +1,5 @@
 import { useState } from "react";
 import "../styles/Navbar.css";
-import { FaBars } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
@@ -17,9 +15,15 @@ function Navbar() {
             <h1 className="logo">
                 <Link to="/">Portfolio</Link>
             </h1>
+            
+            {/* Tombol Hamburger */}
             <button className={`menu-toggle ${menuActive ? "active" : ""}`} onClick={toggleMenu}>
-                {menuActive ? <IoMdClose /> : <FaBars />}
+                <div></div>
+                <div></div>
+                <div></div>
             </button>
+
+            {/* Menu Navigasi */}
             <ul className={`nav-links ${menuActive ? "active" : ""}`} onClick={toggleMenu}>
                 <li><HashLink to="/#home">Home</HashLink></li>
                 <li><HashLink to="/#about">About</HashLink></li>
