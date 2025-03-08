@@ -2,19 +2,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
-html,
-body {
+html, body {
   margin: 0px;
   padding: 0px;
   font-size: 16px;
   font-family: "Nunito Sans", sans-serif;
   scroll-behavior: smooth;
   background-color: #dedede;
+  overflow-x: hidden; /* Tambahkan ini */
+  box-sizing: border-box; /* Pastikan padding tidak menyebabkan overflow */
+  width: 100%; /* Pastikan body menyesuaikan layar */
 }
 .wrapper {
-  width: 1024px;
+  max-width: 1024px;
+  width: 100%; /* Pastikan tidak melebihi layar */
   margin: auto;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0px;
 }
 
 section {
@@ -43,9 +46,9 @@ section {
   bottom: -5px; /* your padding + border-width */
   margin: auto;
 }
-
 @media only screen and (max-width: 1000px) {
   .wrapper {
     width: 80%;
+    max-width: 100%; /* Mencegah melebihi layar */
   }
 }
