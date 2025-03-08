@@ -18,11 +18,10 @@ function About() {
             <div className="about-container">
                 {/* ScrollVelocity Bertumpukan dengan Gambar */}
                 <ScrollVelocity 
-                    texts={['React Bits', 'Scroll Down']} 
+                    texts={['Full Stack Developer']} 
                     velocity={velocity} 
                     className="custom-scroll-text"
                 />
-                <img src={profilePicture} alt="Profile" className="profile-picture" />
             </div>
 
             <div className='wrapper'>
