@@ -10,7 +10,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { DiCodeigniter } from "react-icons/di";
 
 function About() {
-    const velocity = 250;
+    const velocity = 150;
 
     return (
         <section id="about">
