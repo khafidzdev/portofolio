@@ -12,10 +12,10 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-            <h1 className="logo">
+       
+       <h1 className="logo">
                 <Link to="/">Portfolio</Link>
             </h1>
-            
             {/* Tombol Hamburger */}
             <button className={`menu-toggle ${menuActive ? "active" : ""}`} onClick={toggleMenu}>
                 <div></div>
@@ -25,10 +25,10 @@ function Navbar() {
 
             {/* Menu Navigasi */}
             <ul className={`nav-links ${menuActive ? "active" : ""}`} onClick={toggleMenu}>
-                <li><HashLink to="/#home">Home</HashLink></li>
-                <li><HashLink to="/#about">About</HashLink></li>
-                <li><HashLink to="/#projects">Projects</HashLink></li>
-                <li><HashLink to="/#contact">Contact</HashLink></li>
+                <li><Link to="/">Home</Link></li>
+                <li><HashLink to="/#portfolio">Portfolio</HashLink></li>
+                        <li><HashLink to="/#about">About</HashLink></li>
+                        <li><Link to="/experience">Experience</Link></li>
             </ul>
         </nav>
     );

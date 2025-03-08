@@ -24,7 +24,8 @@ body {
   text-decoration: none;
   font-size: 26px;
   font-weight: bold;
-  color: teal;
+  color: transparent;
+
 }
 
 .nav-links {
@@ -63,8 +64,10 @@ body {
 }
 
 .menu-toggle {
-  width: 40px;
-  height: 30px;
+  width: 30px;
+  height: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,9 +86,8 @@ body {
   border-radius: 2px;
 }
 
-/* Efek ketika tombol diklik */
 .menu-toggle.active div:nth-child(1) {
-  transform: translateY(13px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .menu-toggle.active div:nth-child(2) {
@@ -93,5 +95,5 @@ body {
 }
 
 .menu-toggle.active div:nth-child(3) {
-  transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
