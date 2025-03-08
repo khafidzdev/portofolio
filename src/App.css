@@ -2,37 +2,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
-html,
-body {
-  margin: 0px;
-  padding: 0px;
+html, body {
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   font-family: "Nunito Sans", sans-serif;
   scroll-behavior: smooth;
   background-color: #dedede;
+  overflow-x: hidden; /* Mencegah geser ke kanan/kiri */
+  width: 100%;
 }
+
 .wrapper {
-  width: 1024px;
+  max-width: 1024px;
+  width: 100%;
   margin: auto;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0;
+  box-sizing: border-box; /* Agar padding tidak menyebabkan overflow */
 }
 
 section {
-  padding: 50px 0px 50px 0px;
+  padding: 50px 0;
 }
 
 .wrapper > h3,
 .wrapper > h1 {
   text-align: center;
   font-size: 2.8rem;
-  margin: 0px 0px 30px 0px;
-  padding: 0px;
+  margin: 0 0 30px 0;
+  padding: 0;
   font-family: "Kanit", sans-serif;
   color: #222831;
   letter-spacing: 5px;
   text-transform: uppercase;
   border-bottom: 5px solid #cccccc;
 }
+
 .wrapper > h3::after,
 .wrapper > h1::after {
   content: "";
@@ -40,12 +45,13 @@ section {
   border-bottom: 5px solid #aa392d;
   width: 25%;
   position: relative;
-  bottom: -5px; /* your padding + border-width */
+  bottom: -5px;
   margin: auto;
 }
 
+/* Responsive untuk Mobile */
 @media only screen and (max-width: 1000px) {
   .wrapper {
-    width: 80%;
+    width: 90%; /* Agar tidak terlalu mepet di layar kecil */
   }
 }
