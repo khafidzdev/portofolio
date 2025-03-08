@@ -1,42 +1,45 @@
-import { useState } from 'react';
-import '../styles/Navbar.css'
-import { FaBars } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
-import { HashLink } from 'react-router-hash-link'
-import { Link } from 'react-router-dom'
-
+import { useState } from "react";
+import "../styles/Navbar.css";
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
+import { FaInstagram } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 
 function Navbar() {
-    const [statusTampil, setStatusTampil] = useState('')
+    const [menuActive, setMenuActive] = useState(false);
 
-    function tampilMenu() {
-        if (statusTampil == '') {
-            setStatusTampil('tampil')
-        } else {
-            setStatusTampil('')
-        }
+    function toggleMenu() {
+        setMenuActive(!menuActive);
     }
+
     return (
-        <nav>
-            <div className="wrapper">
-                <div className="logo">
-                    <Link to="/">RumahRafif</Link>
-                </div>
-                <button onClick={tampilMenu}>
-                    {
-                        statusTampil == '' ? (<FaBars />) : (<IoMdClose />)
-                    }
-                </button>
-                <div className={`menu ${statusTampil}`} onClick={tampilMenu}>
-                    <ul>
-                        <li><HashLink to="/#portfolio">Portfolio</HashLink></li>
+        <nav className="navbar">
+       
+       <h1 className="logo">
+                <Link to="/">Portfolio</Link>
+            </h1>
+            <button className={`menu-toggle ${menuActive ? "active" : ""}`} onClick={toggleMenu}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+
+            <ul className={`nav-links ${menuActive ? "active" : ""}`} onClick={toggleMenu}>
+                <li><Link to="/">Home</Link></li>
+                <li><HashLink to="/#portfolio">Portfolio</HashLink></li>
                         <li><HashLink to="/#about">About</HashLink></li>
                         <li><Link to="/experience">Experience</Link></li>
-                    </ul>
+                        <div className='socialMedia'>
+                    <a href=''><FaInstagram /></a>
+                    <a href=''><FaTiktok /></a>
+                    <a href=''><FaTwitter /></a>
+                    <a href=''><FaFacebookF /></a>
                 </div>
-            </div>
+            </ul>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;
