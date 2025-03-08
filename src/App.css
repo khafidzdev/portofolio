@@ -10,14 +10,13 @@ body {
   font-family: "Nunito Sans", sans-serif;
   scroll-behavior: smooth;
   background-color: #dedede;
-  overflow-x: hidden; /* Mencegah halaman bergeser ke kanan/kiri */
 }
 .wrapper {
-  max-width: 1024px; /* Maksimum lebar tetap 1024px di desktop */
-  width: 90%; /* Menggunakan persentase agar fleksibel di mobile */
+  width: 1024px;
   margin: auto;
-  padding: 20px 0px;
+  padding: 20px 0px 20px 0px;
 }
+
 section {
   padding: 50px 0px 50px 0px;
 }
@@ -47,8 +46,6 @@ section {
 
 @media only screen and (max-width: 1000px) {
   .wrapper {
-    width: 95%; /* Lebih fleksibel untuk layar kecil */
-    padding: 10px; /* Kurangi padding agar tidak terasa terlalu luas */
-    overflow-x: hidden; /* Mencegah geseran ke kanan/kiri */
+    width: 80%;
   }
 }
