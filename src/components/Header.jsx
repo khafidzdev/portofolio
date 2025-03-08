@@ -1,4 +1,3 @@
-import profilePicture from '../assets/profile-picture.png'
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -22,7 +21,7 @@ animationDuration={3}
 pauseBetweenAnimations={2}
 />
 <BlurText
-  text="Programmer - Content Creator - Researcher"
+  text="Programmer - It Consultant - Researcher"
   delay={150}
   animateBy="words"
   direction="top"
