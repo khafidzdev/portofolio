@@ -2,10 +2,11 @@
   background-color: #000;
   position: relative;
   font-size: 1.2rem;
+  
 }
 #about > .wrapper {
   margin: auto;
-  width: 50%;
+  width: 80%;
 }
 #about > .wrapper > h3 {
   text-align: center;
@@ -43,12 +44,53 @@ color: #fff;}
   cursor: pointer;
 }
 
-.skills > svg:hover {
-  color: #aa392d;
-}
+
 
 @media only screen and (max-width: 1000px) {
   #about > .wrapper {
     width: 80%;
   }
+}
+.skills-carousel {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.skills-carousel .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-carousel .swiper-slide svg {
+  width: 60px;
+  height: 60px;
+  color: #74797e;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.skills-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-carousel::before,
+.skills-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 2;
+}
+
+.skills-carousel::before {
+  left: 0;
+}
+
+.skills-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
 }

@@ -1,13 +1,12 @@
 .falling-text-container {
   position: relative;
   min-height: 120px; /* Menjaga tinggi tetap */
-  overflow: visible; /* Memastikan teks tidak terpotong */
+  overflow: visible; /* Pastikan teks tetap terlihat */
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: transform 0.3s ease-out;
-  z-index: 10; /* Pastikan elemen ini ada di atas elemen lain */
 }
 .falling-text-target {
   display: inline-block;
@@ -17,10 +16,15 @@
   display: inline-block;
   margin: 0 2px;
   user-select: none;
+  background-color: aqua;
+  border-radius: 10px;
+  width: 100px;
+  overflow: hidden;
+  text-align: center;
 }
 
 .highlighted {
-  color: cyan;
+  color: purple;
   font-weight: bold;
 }
 
