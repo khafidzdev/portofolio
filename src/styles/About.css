@@ -94,3 +94,74 @@ color: #fff;}
   right: 0;
   background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
 }
+.github-calendar-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+}
+
+.github-calendar-container h4 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.github-calendar-container text {
+    fill: white !important; /* Mengubah warna teks menjadi putih */
+}
+.github-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.github-profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.github-info h3 {
+  color: white;
+  margin: 0;
+}
+
+.github-info p {
+  color: #bbb;
+  margin: 5px 0;
+}
+
+.github-info a {
+  color: #fcb040;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.github-info a:hover {
+  text-decoration: underline;
+}
+
+/* Menyembunyikan teks "Less More" */
+.github-calendar-container svg g:last-child {
+  display: none;
+}
+
+/* Agar teks bulan tetap putih */
+.github-calendar-container svg text {
+  fill: white !important;
+}
+
+/* Supaya tampilan lebih rapi */
+.github-calendar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
