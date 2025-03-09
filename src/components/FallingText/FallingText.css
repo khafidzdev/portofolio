@@ -1,0 +1,32 @@
+.falling-text-container {
+  position: relative;
+  min-height: 120px; /* Menjaga tinggi tetap */
+  overflow: visible; /* Memastikan teks tidak terpotong */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  z-index: 10; /* Pastikan elemen ini ada di atas elemen lain */
+}
+.falling-text-target {
+  display: inline-block;
+}
+
+.word {
+  display: inline-block;
+  margin: 0 2px;
+  user-select: none;
+}
+
+.highlighted {
+  color: cyan;
+  font-weight: bold;
+}
+
+.falling-text-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}

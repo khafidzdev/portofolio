@@ -1,5 +1,5 @@
 #about {
-  background-color: #eaedef;
+  background-color: #000;
   position: relative;
   font-size: 1.2rem;
 }
@@ -18,8 +18,9 @@
   text-transform: uppercase;
 }
 #about > .wrapper > p {
-  text-align: center;
-}
+  text-align: justify; /* Rata kanan-kiri untuk tampilan lebih rapi */
+  line-height: 1.6; /* Jarak antar baris agar lebih nyaman */
+color: #fff;}
 
 #about > .wrapper > h4 {
   text-align: center;

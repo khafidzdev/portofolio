@@ -18,7 +18,7 @@ function Navbar() {
         <nav className="navbar">
        
        <h1 className="logo">
-                <Link to="/">Portfolio</Link>
+                <Link to="/">KhafidzDev</Link>
             </h1>
             <button className={`menu-toggle ${menuActive ? "active" : ""}`} onClick={toggleMenu}>
                 <div></div>
