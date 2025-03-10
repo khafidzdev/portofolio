@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import DecryptedText from '../ccomponents/DecryptedText/DecryptedText'
 import '../styles/About.css';
 import { FaPhp, FaHtml5, FaReact, FaBootstrap, FaLaravel } from "react-icons/fa";
 import { SiJavascript, SiVisualstudiocode, SiMysql, SiUnity } from "react-icons/si";

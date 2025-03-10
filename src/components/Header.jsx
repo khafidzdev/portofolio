@@ -9,7 +9,7 @@ function Header() {
         <header>
             <div className="header-jumbotron">
                 <img src={profilePicture} />
-                <h3>Muhammad Rafif</h3>
+                <h3>KhafidzDev</h3>
                 <p>Programmer - Content Creator - Researcher</p>
                 <div className='socialMedia'>
                     <a href=''><FaInstagram /></a>
