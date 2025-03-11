@@ -11,15 +11,16 @@ function Header() {
                 <img src={profilePicture} />
                 <h3>KhafidzDev</h3>
                 <p>Programmer - Content Creator - Researcher</p>
-                <div className='socialMedia'>
+                {/* <div className='socialMedia'>
                     <a href=''><FaInstagram /></a>
                     <a href=''><FaTiktok /></a>
                     <a href=''><FaTwitter /></a>
                     <a href=''><FaFacebookF /></a>
-                </div>
+                </div> */}
             </div>
         </header>
-    )
+    
+)
 }
 
 export default Header
