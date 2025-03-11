@@ -12,7 +12,7 @@ function Header() {
     return (
         <header>
             <div className="header-jumbotron">
-                <img src={profilePicture} />
+                <img src={profilePicture} className="img" />
                 <h3>KhafidzDev</h3>
                 <BlurText
   text="                Programmer - Content Creator - Researcher

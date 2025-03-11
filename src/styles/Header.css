@@ -7,7 +7,9 @@ header {
   letter-spacing: 5px;
   text-shadow: 0 0 4px #000;
 }
-
+.img{
+  border-radius: 50%;
+}
 .header-jumbotron {
   position: absolute;
   top: 0;
